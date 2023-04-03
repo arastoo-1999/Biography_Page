@@ -1,8 +1,9 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 
 const About = () => {
     return (
-        <div>
+        <Element name='about'>
             <span>About</span>
             <h2>in Progress</h2>
             <div style={{width: '250px'}}>
@@ -10,7 +11,7 @@ const About = () => {
                     i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer i'm front-ent developer.
                 </p>
             </div>
-        </div>
+        </Element>
     );
 };
 

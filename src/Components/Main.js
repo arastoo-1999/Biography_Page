@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Element } from 'react-scroll';
+
 
 // image 
 import ProfileImage from '../assets/Mypic.jpg';
@@ -7,6 +8,9 @@ import ProfileImage from '../assets/Mypic.jpg';
 // Components
 import About from './About';
 import Skills from './Skills';
+import Contact_me from './Contact_me';
+
+// Styles
 
 const Main = () => {
 
@@ -21,7 +25,7 @@ const Main = () => {
     }
 
     return (
-        <>
+        <Element name='main'>
             {
                 open ? 
                 <div onClick={OpenHandler}>
@@ -30,19 +34,19 @@ const Main = () => {
             <div>
                 <div>
                     <img  alt='icon' />
-                    <span>Home</span>
+                    <Link to='main' smooth={true} duration={1000}>Home</Link>
                 </div>
                 <div>
                     <img  alt='icon' />
-                    <span>About</span>
+                    <Link to='about' smooth={true} duration={1000}>About</Link>
                 </div> 
                 <div>
                     <img  alt='icon' />
-                    <span>Performance</span>
+                    <Link to='skills' smooth={true} duration={1000}>Skills</Link>
                 </div>
                 <div>
                     <img alt='icon' />
-                    <span>Contact me</span>
+                    <Link to='contact_me' smooth={true} duration={1000}>Contact me</Link>
                 </div>
             </div>
                 </div>
@@ -67,12 +71,17 @@ const Main = () => {
                     <p>MBTI: <span>ISTJ</span></p>
                 </div>
                 <img src={ProfileImage} alt="mypic" width="300px" />
-                <div>
+                <section>
                     <About />
+                <section>
+                </section>
                     <Skills />
-                </div>
+                </section>
+                <section>
+                    <Contact_me />
+                </section>
             </div>
-        </>
+        </Element>
     );
 };
 
